@@ -22,7 +22,7 @@ public class Week9_Lab3
 
 		for (int i = 0; i < 10; i++)
 		{
-			aryRandNum[i] = rand.GetANumber_Between_1_and_10();
+			aryRandNum[i] = rand.GetANumber(100);
 			int iMod = aryRandNum[i] % 2;
 
 			sGuess = JOptionPane.showInputDialog(String.format("Round %d: ODD or EVEN: ", i + 1));
