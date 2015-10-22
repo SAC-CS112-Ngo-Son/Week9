@@ -3,7 +3,7 @@ import java.util.Random;;
 public class RandomNumber
 {
 
-	public static int Generate()
+	public int Generate()
 	{
 		// TODO Auto-generated method stub
 		Random rand = new Random();
