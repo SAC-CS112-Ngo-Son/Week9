@@ -2,7 +2,6 @@
 //Son Ngo
 
 import javax.swing.JOptionPane;
-//import java.util.Random;
 import java.util.Arrays;
 
 public class Week9_Lab3
@@ -37,49 +36,41 @@ public class Week9_Lab3
 			{
 				aryOdd[i] = 1;
 				aryEven[i] = 0;
+				iCountOdd++;
 			} else
 			{
 				aryOdd[i] = 0;
 				aryEven[i] = 1;
+				iCountEven++;
 			}
 
 			if (((sGuess.equals("ODD") && (iMod == 1)) || ((sGuess.equals("EVEN") && (iMod == 0)))))
-				aryResult[i] = 1;
-			else
-				aryResult[i] = 0;
-		}
-
-		for (int j = 0; j < 10; j++)
-		{
-			if (aryOdd[j] == 1)
-				iCountOdd++;
-			if (aryEven[j] == 1)
-				iCountEven++;
-			if (aryResult[j] == 1)
 			{
+				aryResult[i] = 1;
 				iCountResult++;
-				if (aryOdd[j] == 1)
+				if (aryOdd[i] == 1)
 					JOptionPane.showMessageDialog(null,
 							String.format(
 									"Round %d:\nThe number is %d\nYou guessed ODD. Your guess is correct\nYou've guessed ODD %d times, EVEN %d times, and won %d times",
-									j + 1, aryRandNum[j], iCountOdd, iCountEven, iCountResult));
+									i + 1, aryRandNum[i], iCountOdd, iCountEven, iCountResult));
 				else
 					JOptionPane.showMessageDialog(null,
 							String.format(
 									"Round %d:\nThe number is %d\nYou guessed EVEN. Your guess is correct\nYou've guessed ODD %d times, EVEN %d times, and won %d times",
-									j + 1, aryRandNum[j], iCountOdd, iCountEven, iCountResult));
+									i + 1, aryRandNum[i], iCountOdd, iCountEven, iCountResult));
 			} else
 			{
-				if (aryOdd[j] == 1)
+				aryResult[i] = 0;
+				if (aryOdd[i] == 1)
 					JOptionPane.showMessageDialog(null,
 							String.format(
 									"Round %d:\nThe number is %d\nYou guessed ODD. Your guess is incorrect\nYou've guessed ODD %d times, EVEN %d times, and won %d times",
-									j + 1, aryRandNum[j], iCountOdd, iCountEven, iCountResult));
+									i + 1, aryRandNum[i], iCountOdd, iCountEven, iCountResult));
 				else
 					JOptionPane.showMessageDialog(null,
 							String.format(
 									"Round %d:\nThe number is %d\nYou guessed EVEN. Your guess is incorrect\nYou've guessed ODD %d times, EVEN %d times, and won %d times",
-									j + 1, aryRandNum[j], iCountOdd, iCountEven, iCountResult));
+									i + 1, aryRandNum[i], iCountOdd, iCountEven, iCountResult));
 			}
 		}
 	}
