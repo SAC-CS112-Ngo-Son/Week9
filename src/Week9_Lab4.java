@@ -19,10 +19,13 @@ public class Week9_Lab3
 		int iCountEven = 0;
 		int iCountResult = 0;
 		String sGuess;
-
+		int iHigh;
+		
+		iHigh = Integer.parseInt(JOptionPane.showInputDialog("Enter high value: "));
+		
 		for (int i = 0; i < 10; i++)
 		{
-			aryRandNum[i] = rand.GetANumber(100);
+			aryRandNum[i] = rand.GetANumber(iHigh);
 			int iMod = aryRandNum[i] % 2;
 
 			sGuess = JOptionPane.showInputDialog(String.format("Round %d: ODD or EVEN: ", i + 1));
