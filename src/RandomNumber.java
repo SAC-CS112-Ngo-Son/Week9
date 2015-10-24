@@ -15,4 +15,10 @@ public class RandomNumber
 		return rand.nextInt(high + 1);
 	}
 
+	public int GetANumber_2(int lo, int hi)
+	{
+		Random rand = new Random();
+		return rand.nextInt(hi - lo + 1) + lo;
+	}
+
 }

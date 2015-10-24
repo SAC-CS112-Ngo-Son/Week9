@@ -4,7 +4,7 @@
 import javax.swing.JOptionPane;
 import java.util.Arrays;
 
-public class Week9_Lab4
+public class Week9_Lab5
 {
 
 	public static void main(String[] args)
@@ -19,13 +19,14 @@ public class Week9_Lab4
 		int iCountEven = 0;
 		int iCountResult = 0;
 		String sGuess;
-		int iHigh;
+		int iHigh, iLow;
 		
+		iLow = Integer.parseInt(JOptionPane.showInputDialog("Enter low value: "));
 		iHigh = Integer.parseInt(JOptionPane.showInputDialog("Enter high value: "));
 		
 		for (int i = 0; i < 10; i++)
 		{
-			aryRandNum[i] = rand.GetANumber(iHigh);
+			aryRandNum[i] = rand.GetANumber_2(iLow, iHigh);
 			int iMod = aryRandNum[i] % 2;
 
 			sGuess = JOptionPane.showInputDialog(String.format("Round %d: ODD or EVEN: ", i + 1));
